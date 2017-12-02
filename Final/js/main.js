@@ -1,0 +1,29 @@
+$(document).ready(function(){
+    $("#arc").ready(function(){
+        $(".arc").hide();
+    });
+     $("#com").ready(function(){
+        $(".com").hide();
+    });
+    $("#eve").ready(function(){
+        $(".eve").hide();
+    });
+    $("#evet").ready(function(){
+        $(".evet").hide();
+    });
+    $("#wel").ready(function(){
+        $(".wel").hide();
+    });
+    $("#2").click(function(){
+        $(".3").toggle();
+    });
+    $("#2").click(function(){
+        $(".4").hide();
+    });
+    $("#3").click(function(){
+        $(".4").toggle();
+    });
+    $("#3").click(function(){
+        $(".3").toggle();
+    });
+});

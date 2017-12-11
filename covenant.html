@@ -22,6 +22,25 @@
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <script>
+            function validateForm() {
+                var x = document.forms["RequiredForm"]["firstname"].value;
+                if (x == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+                var x = document.forms["RequiredForm"]["lastname"].value;
+                if (x == "") {
+                    alert("Last name must be filled out");
+                    return false;
+                }
+                var x = document.forms["RequiredForm"]["email"].value;
+                if (x == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+            }
+        </script>
     </head>
     <body>
     <div>
@@ -78,7 +97,7 @@
         Covenants will be enforced by the Board if there is a specific complaint submitted to the board according to the Covenant Enforcement Policy.  If you would like to make a complaint or covenant enforcement request to the HOA Board, please fill out the Covenant Enforcement Form below. Note that the information submitted will not be published on this website, but it will be used by the Board of Directors as they investigate the complaint. All the information below is required to help determine whether this violation is valid or not.<br>  
         <br>  
     </div>
-    <form action="https://formspree.io/ajwilkins14@gmail.com"
+    <form name="RequiredForm" action="https://formspree.io/ajwilkins14@gmail.com" onsubmit="return validateForm()"
     method="POST">
         Your First Name <br>
         <input type="text" name="firstname">

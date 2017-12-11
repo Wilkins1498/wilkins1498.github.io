@@ -1,8 +1,18 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
-        <style>h1 {text-indent: 200px; color:#ff9c00;}</style> <style>a.button{background-color: #3d8cca;color: black;padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px; position: absolute; top: 4%; right: 10%;}</style><style>h3.Facebook {position: absolute; top: 10%; right: 30%;}</style><style>i {position: absolute; top: 13%; right: 28%; color: blue;}</style> <style>h3.Nextdoor {position: absolute; top: 10%; right: 15%;}</style><style>img.Nextdoor {position: absolute; top: 13%; right: 13%;}</style><style>ul {list-style-type: none; position: absolute; right: 20%; bottom: 35%; font-size: 30px;} li a {display: block; color:#ff9c00; text-decoration: none;}</style><style>input {position: absolute; right: 45%; bottom: 70%;}</style><style>div.announcements {position: relative; left: 7%; top: 40%;}</style><style>div.contact {font-size: 12px;}</style>
-        <meta charset="utf-8"><style>iframe.map {position: absolute; right: 7%; top: 65%;}</style><style>div.map {color: #ff9c00;  position: absolute; right: 7%; top: 61%; text-decoration: Uppercase; }</style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110949753-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110949753-1');
+        </script>
+        <meta charset="utf-8">
+        <style>h1 {text-indent: 200px; color:#ff9c00;}a.button{background-color: #3d8cca;color: black;padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px; position: absolute; top: 4%; right: 10%;}h3.Facebook {position: absolute; top: 10%; right: 30%;}i {position: absolute; top: 13%; right: 28%; color: blue;}h3.Nextdoor {position: absolute; top: 10%; right: 15%;}img.Nextdoor {position: absolute; top: 13%; right: 13%;}ul {list-style-type: none; position: absolute; right: 20%; bottom: 35%; font-size: 30px;} li a {display: block; color:#ff9c00; text-decoration: none;}input {position: absolute; right: 45%; bottom: 70%;}div.announcements {position: relative; left: 7%; top: 40%;}div.contact {font-size: 12px;padding-left: 40px;}iframe.map {position: absolute; right: 7%; top: 65%; width: 400px; height: 350px;border: solid;}div.map {color: #ff9c00;  position: absolute; right: 7%; top: 61%;}footer {padding-left: 40px;padding-left: 40px;}</style>
+        
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Announcements</title>
         <meta name="description" content="">
@@ -24,10 +34,10 @@
         <a href="https://nextdoor.com/neighborhood/prairiefields--savoy--il/">
             <img src="https://cloud.githubusercontent.com/assets/1016880/8116809/d8399054-1049-11e5-9e08-dae19c604d06.png" alt="Nextdoor" width="24" height="24" class="Nextdoor"></a>
     </div>
-      <img src="img/Logo2.png" alt="Logo" height="150">
+    <a href="index.html">
+    <img src="img/Logo2.png" alt="Logo" height="150"></a>
       <br>
       <h1 style=font-size:50px;>Announcements</h1>
-    <input type="text" name="search" placeholder="Search">
     <ul>
         <li><a href="index.html">Announcements</a></li>
         <li><a href="board.html">Board</a></li>
@@ -37,9 +47,9 @@
         <li><a href="phases.html">Phases Map</a></li>
     </ul>
     <div class="map">Our dropbox location.</div>
-    <iframe class="map" width="400" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=40.057948%2C-88.240689&key=AIzaSyAvnjN2c0EXEI9WTZE-bsMYy9Yc-ewDEMY" allowfullscreen></iframe>
+    <iframe class="map" src="https://www.google.com/maps/embed/v1/place?q=40.057948%2C-88.240689&key=AIzaSyAvnjN2c0EXEI9WTZE-bsMYy9Yc-ewDEMY" allowfullscreen></iframe>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-    <div class="announcements" style="height:600px;width:700px;border:none #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+    <div class="announcements" style="height:600px;width:700px;border:none #ccc;font:16px/26px Georgia, Garamond, Serif;">
         <span style="font-weight:bold; color:#ff9c00; font-size:20px;">Now accepting Board of Directors applications</span>
         <br>
         <span style="color:#ff9c00;">10/24/2017</span>
@@ -69,7 +79,7 @@
         Planning 
         We will be planning at the next HOA Board meeting at Carrie Busey Elementary on Monday, November 14th at 8pm. If you'd like to help out in any capacity of the planning please attend. 
         
-        Treat Tables - If you'd like to host, please e-mail board@prairiefieldshoa.com 
+        Treat Tables - If you'd like to host, please e-mail  <a href="mailto:board@prairefieldshoa.com"><span style="color:#ff9c00;">board@prairiefieldshoa.com</span></a>
         We will be looking for folks to provide and monitor the treat tables/voting stations. Each table will be given $30 to purchase the treats. We would like to focus on having these tables stationed at corners throughout the neighborhood to make it easy for visitors to find. This year we are looking to have ballot style voting sheets that people can carry with them as they look at the houses. 
         
         PRIZES! 
@@ -111,7 +121,7 @@
     <hr>
     <div class="contact">
     Contact the PFHOA Board of Directors <br>
-    Email: <a href="mailto:board@prairefieldshoa.com">board@prairiefieldshoa.com</a> <br>
+    Email: <a style="color:#ff9c00;" href="mailto:board@prairefieldshoa.com">board@prairiefieldshoa.com</a> <br>
     Mail: P.O. Box 478, Savoy, Il  61874 <br>
     Phone: (217) 689-1360 <br>
     </div>

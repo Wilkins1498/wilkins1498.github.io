@@ -1,25 +1,82 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
-        <style>h1 {text-indent: 200px; color:#ff9c00; size: 150px}</style> <style>a.button{background-color: #3d8cca;color: black;padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px; position: absolute; top: 4%; right: 10%;}</style><style>h3.Facebook {position: absolute; top: 10%; right: 30%;}</style><style>i {position: absolute; top: 13%; right: 28%; color: blue;}</style> <style>h3.Nextdoor {position: absolute; top: 10%; right: 15%;}</style><style>img.Nextdoor {position: absolute; top: 13%; right: 13%;}</style><style>ul {list-style-type: none; position: absolute; right: 20%; bottom: 35%; font-size: 30px;} li a {display: block; color:#ff9c00; text-decoration: none;}</style><style>input {position: absolute; right: 45%; bottom: 70%;}</style><style>div.contact {font-size: 12px;}</style>
-        <meta charset="utf-8">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110949753-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110949753-1');
+        </script>
+        <meta charset="utf-8">   
+        <style>h1 {text-indent: 200px; color:#ff9c00;}a.button{background-color: #3d8cca;color: black;padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px; position: absolute; top: 4%; right: 10%;}h3.Facebook {position: absolute; top: 10%; right: 30%;}i {position: absolute; top: 13%; right: 28%; color: blue;}h3.Nextdoor {position: absolute; top: 10%; right: 15%;}img.Nextdoor {position: absolute; top: 13%; right: 13%;}ul.lists {list-style-type: none; position: absolute; right: 20%; bottom: 35%; font-size: 30px;} li a {display: block; color:#ff9c00; text-decoration: none;}input {position: absolute; right: 45%; bottom: 70%;} div.contact {font-size: 12px; padding-left: 40px;} footer {padding-left: 40px;}div.gallery {border: 1px solid #ccc;width: 250px; display: inline-block;}div.desc {text-align: center;}div.scroll { width: 900px; height: 400px; overflow: scroll;} </style>
+        
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Announcements</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("#greg, #pj, #dan, #kyle, #bri, #mari, #tim").ready(function(){
+                $(".gdesc, .pdesc, .ddesc, .kdesc, .bdesc, .mdesc, .tdesc").hide();
+            });
+            $("#greg").click(function(){
+                $(".gdesc").toggle();
+            });
+            $("#greg").click(function(){
+                $(".pdesc, .kdesc, .bdesc, .mdesc, .tdesc, .ddesc").hide();
+            });
+            $("#pj").click(function(){
+                $(".pdesc").toggle();
+            });
+            $("#pj").click(function(){
+                $(".gdesc, .kdesc, .bdesc, .mdesc, .tdesc").hide();
+            });
+            $("#dan").click(function(){
+                $(".ddesc").toggle();
+            });
+            $("#dan").click(function(){
+                $(".gdesc, .pdesc, .kdesc, .bdesc, .mdesc, .tdesc").hide();
+            });
+            $("#kyle").click(function(){
+                $(".kdesc").toggle();
+            });
+            $("#kyle").click(function(){
+                $(".gdesc, .ddesc, .pdesc, .bdesc, .mdesc, .tdesc").hide();
+            });
+            $("#bri").click(function(){
+                $(".bdesc").toggle();
+            });
+            $("#bri").click(function(){
+                $(".gdesc, .ddesc, .pdesc, .kdesc, .mdesc, .tdesc").hide();
+            });
+            $("#mari").click(function(){
+                $(".mdesc").toggle();
+            });
+            $("#mari").click(function(){
+                $(".gdesc, .ddesc, .pdesc, .kdesc, .bdesc, .tdesc").hide();
+            });
+            $("#tim").click(function(){
+                $(".tdesc").toggle();
+            });
+            $("#tim").click(function(){
+                $(".gdesc, .ddesc, .pdesc, .kdesc, .mdesc, .bdesc").hide();
+            });
+        });
+        </script>
     </head>
     <body>
     <div>
         <a href="newsletter.html" class="button">Click Me To Sign Up For Our Newsletter!</a>    
     </div>
-    
     <div>
         <h3 class="Facebook">Our Facebook</h3>
         <a href="https://www.facebook.com/PFHOA"><i style="font-size:24px" class="fa">&#xf09a;</i></a>
@@ -27,11 +84,11 @@
         <a href="https://nextdoor.com/neighborhood/prairiefields--savoy--il/">
             <img src="https://cloud.githubusercontent.com/assets/1016880/8116809/d8399054-1049-11e5-9e08-dae19c604d06.png" alt="Nextdoor" width="24" height="24" class="Nextdoor"></a>
     </div>
-      <img src="img/Logo2.png" alt="Logo" height="150">
+    <a href="index.html"> 
+    <img src="img/Logo2.png" alt="Logo" height="150"></a>  
       <br>
       <h1 style=font-size:50px;>Board</h1>
-    <input type="text" name="search" placeholder="Search">
-    <ul>
+    <ul class="lists">
         <li><a href="index.html">Announcements</a></li>
         <li><a href="board.html">Board</a></li>
         <li><a href="committees.html">Committees</a></li>
@@ -39,7 +96,154 @@
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="phases.html">Phases Map</a></li>
     </ul>
-    
+    <p style="width:45em;padding-left:50px;">
+        The day to day operations of the PF HOA are run by an all-volunteer Board of Directors, along with help from many other committee volunteers. The Board establishes the annual dues assessment and is responsible for using the money assessed to maintain and improve HOA property and offer programs which are of value to Prairie Fields residents, thereby increasing the value of the neighborhood.  
+        
+        
+        For more information, please email <a href="mailto:board@prairefieldshoa.com"><span style="color:#ff9c00;">board@prairiefieldshoa.com</span></a> 
+
+        <br>
+        This information pertains to Annual Prairie Field HOA and Prairie Field HOA Board of Directors (BoD) meeting. Monthly statements are available upon request.​
+        
+        Search, view and download the Prairie Fields Board of Directors meetings notes and minutes <a href="https://drive.google.com/drive/folders/0B7LDw01_ZSTlRi1hMjBsWk9oZWc">here.</a> Click on each picture to read a description. </p>
+        <div class="images" style="padding-left:50px;">
+            <div class="gallery">
+                    <img id="greg" src="img/Greg.png" alt="Greg" width="250" height="200">
+                <div class="gdesc">Greg Sopa​ - President <br> 
+                        303 Trefoil Street                      
+                        <br>
+                        U.S. Consumer Group Manager at Horizon Hobby
+                        <br>
+                        HOA Goals: <br>
+                        Establish measureable annual and long term goals for Prairies Fields <br>
+                        Increase participation on Nextdoor.com to benefit neighborhood safety, communication, and a greater sense of community <br>
+                        Increase PFHOA education and participation in future association decisions <br></div>
+            </div>
+              
+            <div class="gallery">
+                    <img id="pj" src="img/PJ.png" alt="PJ" width="250" height="250">
+                <div class="pdesc" style="width:250px;">P.J. Trautman* - Vice President <br>
+                        606A Sunflower Street
+                        <br>
+                        Real Estate Appraiser and Realtor at Champaign County Realtor
+                        <br>
+                        HOA Goals: <br>
+                        Continue preserving and maintaining the overall appeal and desirability of Prairie Fields, while being vigilant of issues or conditions that may affect the quality of living. <br>
+                        Maintain a healthy reserve in the Prairie Fields operations account, and collaborate on new ideas to improve our community, and increase property values. <br>
+                        See a permanent solution to the drainage field on the East end of Prairie Fields Park, along First St; perhaps a fish-stocked retention pond, for fishing derbies, paddle boating, and ice skating (in approved safety conditions). <br></div>
+            </div>
+            <div class="gallery">
+                    <img id="dan" src="img/Dan.png" alt="Northern Lights" width="250" height="200">
+                <div class="ddesc">Dan Harmon* - Treasurer <br>
+                        
+                        409 Trefoil Street
+                        <br>
+                        Assistant Director Web and Application Development at University of Illinois
+                        <br>
+                        HOA Goals: <br>
+                        Establish a neighborhood watch  <br>
+                        ​Increased transparency of fund use <br></div>
+            </div>
+            <div class="gallery">
+                    <img id="kyle" src="img/Kyle.png" alt="Mountains" width="250" height="200">
+                <div class="kdesc">​Kyle Kirchhoefer - Secretary <br>
+                        
+                        201 Sunflower Street 
+                        <br>
+                        Regional Finance Professional at Campus Crusade for Christ
+                        <br>
+                        HOA Goals: <br>
+                        Offer residents discounted lawn care, weed control, etc. by making group agreements and discounts with local companies <br>
+                        Enforce current rules and regulations <br>
+                        Establish lawn care bags pickup <br>
+                        Lower HOA dues. <br>
+                        </div>
+            </div><br>
+            <div class="gallery">
+                    <img id="bri" src="img/Brian.png" alt="Mountains" width="250" height="200">
+                <div class="bdesc">Brian Kesler -  ACC <br>
+                        
+                        22 Parsley Drive
+                        <br>
+                        Architect at Architectural Expressions, LLP
+                        <br>
+                        HOA Goals: <br>
+                        Continue to maintain and protect the character and desirability of our neighborhood as commercial development continues in Savoy br
+                        Gauge interest among Prairie Field's residents about contracting with a single waste disposal/recycling company to provide service to the entire subdivision at a discounted rate and solicit bids <br>
+                        Work with residents to develop a wish list and schedule for capital improvement projects that may be completed with minimal or no increase to annual assessments. <br></div>
+            </div>
+            <div class="gallery">
+                    <img id="mari" src="img/MariAnne.png" alt="Mountains" width="250" height="200">
+                <div class="mdesc">MariAnne Schmidt* - ACC <br>
+                        
+                        415 Trefoil Street
+                        <br>
+                        Office Administrator at FedEx Ground
+                        <br>
+                        HOA Goals: <br>
+                        A set calendar schedule of events <br>
+                        Create a sense of community among neighbors <br></div>
+            </div>
+            <div class="gallery">
+                    <img id="tim" src="img/Tim.png" alt="Mountains" width="250" height="200">
+                <div class="tdesc">Tim Yardley - ACC <br>
+                        
+                        809 Bergamot Drive
+                        <br>
+                        Associate Director of Technology for the Information Trust Institute at the University of Illinois
+                        <br>
+                        HOA Goals: <br>
+                        Continue to preserve the overall appeal of the Prairie Fields subdivision. <br>
+                        Address concerns of residents and work to maintain a high-quality living experience. <br>
+                        Enhance the community feel and engagement through interactions. 4. Provide a way to engage with an open dialog on what residents really want in moving this neighborhood forward* <br></div>
+            </div>
+        </div>
+        <div class="scroll" style="padding-left:50px;">
+            <strong>* Denotes term ends December 31, 2017 </strong><br>
+                The Prairie Fields HOA is governed by a Board of Directors (BOD), per the PF HOA BYLAWS.  The Board exists to represent and support all members of the homeowners association. <br>
+                <br>
+                Each member of the Board is elected to a two year term, with an election held in the fall of each year for the vacancies of the following year. <br>
+                What are the offices of the Board of Directors?
+                In general, the HOA Board of Directors will have the offices of President, Vice President, Secretary, Treasurer, and Member at Large. The officers are usually elected at the first Board meeting by the Board following the annual association meeting. The term of office for a Board member typically lasts one year. The duties for each office are:
+                <br>
+                President <br>
+                1. Presides at all HOA Board meetings <br>
+                2. Makes sure orders and resolutions are carried out <br>
+                3. Signs contracts <br>
+                <br>
+                Vice-President <br>
+                1. Takes the place of the President when he/she is absent <br>
+                2. Performs other duties as required <br>
+                <br>
+                Secretary <br>
+                1. Keeps meeting minutes <br>
+                2. Records votes <br>
+                <br>
+                Treasurer <br>
+                1. Receives and deposits monies <br>
+                2. Signs checks <br>
+                3. Prepares the annual budget <br>
+                <br>
+                Member at Large <br>
+                1. Participate in Board voting and discussions <br>
+                2. Performs duties as assigned <br>
+                3. Serve on Architectural Control Committee <br>
+                <br>
+                <br>
+                What Other Duties Does an HOA Board Have? <br>
+                <ul class="show">
+                
+                <li>Arrange for the care and upkeep of the commons areas;</li>
+                <li>Set the amount of and collect HOA fees each year </li>
+                <li>Prepare a summary of the accomplishments for the year, including a summary of fiscal expenditures</li>
+                <li>Prepare a budget for the next fiscal year for submission to the membership</li>  
+                <li>Enforce any and all covenants, restrictions, agreements, and rules and regulations to protect the homeowners, relating to the use of common areas and personal conduct of HOA members</li> 
+                <li>Regulate, plan, arrange for and approve all landscaping, improvements, erosion control, aesthetic and architectural issues, usage of the commons areas, and all questions concerning maintenance, repair, improvements, changes, or additions to the commons areas</li> 
+                <li>Secure insurance as may be necessary or advisable</li>
+                </ul><br>
+                When does the Board meet? <br>
+                The BOD generally meets at 8:00 PM on the second Monday of each month in the library at Carrie Busey School.  See the calendar for current scheduling.  The Board may also meet at other times as deemed necessary by the President, and conducts business via email, too.  All email items are discussed at the regular monthly board meeting, so that the meeting minutes reflect emailed action.  Agendas, minutes, and other related documents from the BOD meetings are available on the Meetings page.
+        </div>
     <br>
     <br>
     <br>
@@ -48,7 +252,7 @@
     <hr>
     <div class="contact">
         Contact the PFHOA Board of Directors <br>
-        Email: <a href="mailto:board@prairefieldshoa.com">board@prairiefieldshoa.com</a> <br>
+        Email: <a style="color:#ff9c00;" href="mailto:board@prairefieldshoa.com">board@prairiefieldshoa.com</a> <br>
         Mail: P.O. Box 478, Savoy, Il  61874 <br>
         Phone: (217) 689-1360 <br>
         </div>

@@ -1,53 +1,68 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
-        <style>h1 {text-indent: 200px; color:#ff9c00; size: 150px}</style> <style>a.button{background-color: #3d8cca;color: black;padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px; position: absolute; top: 4%; right: 10%;}</style><style>h3.Facebook {position: absolute; top: 10%; right: 30%;}</style><style>i {position: absolute; top: 13%; right: 28%; color: blue;}</style> <style>h3.Nextdoor {position: absolute; top: 10%; right: 15%;}</style><style>img.Nextdoor {position: absolute; top: 13%; right: 13%;}</style><style>ul.Lists {list-style-type: none; position: absolute; right: 20%; bottom: 35%; font-size: 30px;} li a.index{display: block; color:#ff9c00; text-decoration: none;}</style><style>input {position: absolute; right: 45%; bottom: 70%;}</style><style>div.contact {font-size: 12px;}</style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110949753-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110949753-1');
+        </script>
         <meta charset="utf-8">
+        <style>h1 {text-indent: 200px; color:#ff9c00;}a.button{background-color: #3d8cca;color: black;padding: 15px 32px;text-align: center;text-decoration: none;font-size: 16px; position: absolute; top: 4%; right: 10%;}h3.Facebook {position: absolute; top: 10%; right: 30%;}i {position: absolute; top: 13%; right: 28%; color: blue;}h3.Nextdoor {position: absolute; top: 10%; right: 15%;}img.Nextdoor {position: absolute; top: 13%; right: 13%;}ul.Lists {list-style-type: none; position: absolute; right: 20%; bottom: 35%; font-size: 30px;} li a.index{display: block; color:#ff9c00; text-decoration: none;}input {position: absolute; right: 45%; bottom: 70%;}div.contact {font-size: 12px; padding-left: 40px;}p {width: 400px; border-style: groove; border-color: black}div.committees {padding-left: 30px;}footer {padding-left: 40px;}</style>
+        
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Announcements</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("#com, #ele, #evet, #wel").ready(function(){
+                $(".com, .ele, .evet, .wel").hide();
+            });
+            $("#arc").click(function(){
+                $(".arc").toggle();
+            });
+            $("#arc").click(function(){
+                $(".com, .ele, .evet, .wel").hide();
+            });
+            $("#com").click(function(){
+                $(".com").toggle();
+            });
+            $("#com").click(function(){
+                $(".arc, .ele, .evet, .wel").hide();
+            });
+            $("#ele").click(function(){
+                $(".ele").toggle();
+            });
+            $("#ele").click(function(){
+                $(".arc, .com, .evet, .wel").hide();
+            });
+            $("#evet").click(function(){
+                $(".evet").toggle();
+            });
+            $("#evet").click(function(){
+                $(".arc, .com, .ele, .wel").hide();
+            });
+            $("#wel").click(function(){
+                $(".wel").toggle();
+            });
+            $("#wel").click(function(){
+                $(".arc, .com, .ele, .evet").hide();
+            });
+        });
+        </script>
     </head>
     
     <body>
-    <script>
-        $(document).ready(function(){
-            $("#arc").ready(function(){
-                $("div.well").hide();
-            });
-             $("#com").ready(function(){
-                $(".com").hide();
-            });
-            $("#eve").ready(function(){
-                $(".eve").hide();
-            });
-            $("#evet").ready(function(){
-                $(".evet").hide();
-            });
-            $("#wel").ready(function(){
-                $(".wel").hide();
-            });
-            $("#2").click(function(){
-                $(".3").toggle();
-            });
-            $("#2").click(function(){
-                $(".4").hide();
-            });
-            $("#3").click(function(){
-                $(".4").toggle();
-            });
-            $("#3").click(function(){
-                $(".3").toggle();
-            });
-        });
-    </script>
     <div>
         <a href="newsletter.html" class="button">Click Me To Sign Up For Our Newsletter!</a>    
     </div>
@@ -59,10 +74,10 @@
         <a href="https://nextdoor.com/neighborhood/prairiefields--savoy--il/">
             <img src="https://cloud.githubusercontent.com/assets/1016880/8116809/d8399054-1049-11e5-9e08-dae19c604d06.png" alt="Nextdoor" width="24" height="24" class="Nextdoor"></a>
     </div>
-      <img src="img/Logo2.png" alt="Logo" height="150">
+    <a href="index.html">
+    <img src="img/Logo2.png" alt="Logo" height="150"></a>
       <br>
       <h1 style=font-size:50px;>Committees</h1>
-    <input type="text" name="search" placeholder="Search">
     <ul class="Lists">
         <li><a href="index.html" class="index">Announcements</a></li>
         <li><a href="board.html" class="index">Board</a></li>
@@ -71,13 +86,14 @@
         <li><a href="faqs.html" class="index">FAQs</a></li>
         <li><a href="phases.html" class="index">Phases Map</a></li>
     </ul>
-    <p id="arc">Architecural Control Committee</p>
-        <div class="arc">
+    <div class="committees">
+    <p id="arc" style="color:#ff9c00;font-weight:bold;">Architecural Control Committee</p>
+        <div class="arc" style="width:850px;">
         The goal of the Architectural Control Committee is to preserve the property values of all homeowners in Prairie Fields, and to ensure compliance with applicable covenants when a homeowner makes changes to their property.  The Covenants for each phase of Prairie Fields specify that certain changes to your property require the approval of the Architectural Control Committee.  This committee of residents within Prairie Fields will review proposed plans and grant approval to proceed.  For now, this includes items like an addition to your home, building a deck, fence, or shed, or other substantial work which might affect your neighbors.  
         
         Homeowners are required to submit plans for fences, decks, sheds or other outbuildings, additions, and other structures which require architectural approval to the architectural control committee.  You may wish to review your Covenants for your particular home, before contacting the ACC.  
         
-        Please supply the following information to the ACC by email - ACC@prairiefieldshoa.com:
+        Please supply the following information to the ACC by email -  <a href="mailto:ACC@prairefieldshoa.com"><span style="color:#ff9c00;">ACC@prairiefieldshoa.com</span></a>:
         <ul>
         <li>Your name and house address</li> 
         <li>Your email address</li>
@@ -85,20 +101,20 @@
         <li>A PDF drawing of the plans</li>
         </ul>
         </div>
-    <p id="Com">Communications Committee</p>
-        <div class="com">
-        The Communications Committee is responsible for facilitating communications with residents of Prairie Fields, including an Annual Newsletter, maintaining this website and a facebook group,sending email updates (Subscribe to HOA Email List Here).  The Communications Committee conducts most of its business via email,but does occasionally get together to assemble mailings.    
+    <p id="com" style="color:#ff9c00;font-weight:bold;">Communications Committee</p>
+        <div class="com" style="width:850px;">
+        The Communications Committee is responsible for facilitating communications with residents of Prairie Fields, including an Annual Newsletter, maintaining this website and a facebook group,sending email updates. The Communications Committee conducts most of its business via email,but does occasionally get together to assemble mailings.    
         
         To volunteer on the Communications committee, email the HOA secretary.     
         </div>
-    <P id="ele">Election Committee</P>
-        <div class="ele">   
+    <p id="ele" style="color:#ff9c00;font-weight:bold;">Election Committee</p>
+        <div class="ele" style="width:850px;">   
         The Election Committee is responsible for running an annual election of the homeowners within Prairie Fields.  The election takes place in November of each year, and the purpose is to elect people to the Board of Directors and to allow a chance for referenda, if any, to be voted upon.
         </div>
-    <P id="evet">Events Committee</P>
-        <div class="evet">
+    <p id="evet" style="color:#ff9c00;font-weight:bold;">Events Committee</p>
+        <div class="evet" style="width:850px;">
         The Events Committee is responsible for organizing events for residents of Prairie Fields.  Events include:
-        <ul>
+        <ul class="evet">
         <li>Block Parties
         <li>International Potluck
         <li>Prairie Fields Garage Sale (June)
@@ -108,12 +124,13 @@
         <li>Diwali Celebration (October or November)</li>
         <li>Holiday Caroling (December)</li>
         </ul>
-        The events committee is also in need of a chairperson, and is always in need of more volunteers to assist with planning and running various events and activities.  If you would like to volunteer on the events committee or have an idea for an event, email events@prairiefields.org.
+        The events committee is also in need of a chairperson, and is always in need of more volunteers to assist with planning and running various events and activities.  If you would like to volunteer on the events committee or have an idea for an event, email  <a href="mailto:events@prairefieldshoa.com"><span style="color:#ff9c00;">events@prairiefields.org.</span></a>
         </div>
-    <P id="wel">Welcoming Committee</P>
-        <div class="wel">
-        The Welcoming committee is responsible for welcoming new residents to Prairie Fields.   If you would like to assist this committee, email board@prairiefieldshoa.com.  
+    <p id="wel" style="color:#ff9c00;font-weight:bold;">Welcoming Committee</p>
+        <div class="wel" style="width:850px;">
+        The Welcoming committee is responsible for welcoming new residents to Prairie Fields.   If you would like to assist this committee, email  <a href="mailto:board@prairefieldshoa.com"><span style="color:#ff9c00;">board@prairiefieldshoa.com.</span></a>  
         </div>
+    </div>
     <br>
     <br>
     <br>
@@ -122,7 +139,7 @@
     <hr>
     <div class="contact">
         Contact the PFHOA Board of Directors <br>
-        Email: <a href="mailto:board@prairefieldshoa.com">board@prairiefieldshoa.com</a> <br>
+        Email: <a style="color:#ff9c00;" href="mailto:board@prairefieldshoa.com">board@prairiefieldshoa.com</a> <br>
         Mail: P.O. Box 478, Savoy, Il  61874 <br>
         Phone: (217) 689-1360 <br>
         </div>
